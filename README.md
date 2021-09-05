@@ -11,5 +11,9 @@ Step 1: Install Kyverno using Helm
 
 a) Add the Kyverno Helm repository:
 
-  helm repo add kyverno https://kyverno.github.io/kyverno/
+    helm repo add kyverno https://kyverno.github.io/kyverno/
+
+b) Scan the new repository for charts
+
+    helm repo update
 
