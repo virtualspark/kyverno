@@ -25,7 +25,7 @@ d) Use Kyverno 1.4.2+ to create a customizable Helm release name while installin
 
     helm install kyverno kyverno/kyverno --namespace kyverno
 
-<b> Step 2: </b> Once Kyverno is installed you can start applying the different policies. Here is the link: https://kyverno.io/policies/. Here is the sample commands in how to apply the policies.
+<b> Step 2: </b> Once Kyverno is installed you can start applying the different policies. Here is the link: https://kyverno.io/policies/. Here are some of the examples of commands in how to apply the policies.
 
 a) Applying the <b> restrict image registries </b> policy:
 
@@ -40,4 +40,27 @@ c) Applying the <b> require drop all </b> policy:
     kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/require_drop_all/require_drop_all.yaml
 
 
+<b> Step 3: </b> In order to see the list of policies you have applied, use the following commands:
 
+    kubectl get cpol
+    
+<b> Step 4: </b> To delete a policy, you can do the following:
+
+    kubectl delete cpol <enter the name of the policy>
+    
+For example,
+    
+    kubectl delete cpol restrict-image-registries
+
+<b> Step 5: </b> Finally, if you want to delete your Kyverno installation, you can do the following:
+
+    kubectl delete -f https://raw.githubusercontent.com/kyverno/kyverno/master/definitions/release/install.yaml
+
+## Author
+
+Stanley Tran
+
+## References
+
+#### Documentation on Kyverno
+https://kyverno.io/docs/
