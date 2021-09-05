@@ -7,7 +7,7 @@ Kyverno is a policy engine designed for Kubernetes. It runs as an admission cont
 
 ### How to get it started?
 
-Step 1: Install Kyverno using Helm
+<b> Step 1: </b> Install Kyverno using Helm
 
 a) Add the Kyverno Helm repository:
 
@@ -25,16 +25,19 @@ d) Use Kyverno 1.4.2+ to create a customizable Helm release name while installin
 
     helm install kyverno kyverno/kyverno --namespace kyverno
 
-Step 2: Once Kyverno is installed you can start applying the different policies. Here is the link: https://kyverno.io/policies/. Here is the sample commands in how to apply the policies.
+<b> Step 2: </b> Once Kyverno is installed you can start applying the different policies. Here is the link: https://kyverno.io/policies/. Here is the sample commands in how to apply the policies.
 
 a) Applying the <b> restrict image registries </b> policy:
 
     kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/restrict_image_registries/restrict_image_registries.yaml
     
-b) Applying the disallow default namespace policy:
+b) Applying the <b> disallow default namespace </b> policy:
 
     kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/disallow_default_namespace/disallow_default_namespace.yaml
     
-c) Applying the require drop all policy: 
+c) Applying the <b> require drop all </b> policy: 
+    
     kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/require_drop_all/require_drop_all.yaml
+
+
 
