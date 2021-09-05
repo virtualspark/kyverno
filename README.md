@@ -16,4 +16,25 @@ a) Add the Kyverno Helm repository:
 b) Scan the new repository for charts
 
     helm repo update
+    
+c) Use Helm 3.2+ to create a Namespace and install Kyverno. Beginning with Kyverno 1.4.2, Kyverno Helm chart v2.0.2, the Kyverno CRDs must be added seperately and before Kyverno is installed.
+
+    helm install kyverno-crds kyverno/kyverno-crds --namespace kyverno --create-namespace
+
+d) Use Kyverno 1.4.2+ to create a customizable Helm release name while installing Kyverno. Before Kyverno 1.4.2, the Helm release name must be Kyverno.
+
+    helm install kyverno kyverno/kyverno --namespace kyverno
+
+Step 2: Once Kyverno is installed you can start applying the different policies. Here is the link: https://kyverno.io/policies/. Here is the sample commands in how to apply the policies.
+
+a) Applying the <b> restrict image registries </b> policy:
+
+    kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/restrict_image_registries/restrict_image_registries.yaml
+    
+b) Applying the disallow default namespace policy:
+
+    kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/disallow_default_namespace/disallow_default_namespace.yaml
+    
+c) Applying the require drop all policy: 
+    kubectl apply -f https://raw.githubusercontent.com/kyverno/policies/main/best-practices/require_drop_all/require_drop_all.yaml
 
