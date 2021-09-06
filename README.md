@@ -64,3 +64,9 @@ Stanley Tran
 
 #### Documentation on Kyverno
 https://kyverno.io/docs/
+
+#### YouTube videos
+https://www.youtube.com/watch?v=8fgrjBnxqi0&t=5s
+https://www.youtube.com/watch?v=DREjzfTzNpA
+![image](https://user-images.githubusercontent.com/39383679/132254457-7a2bbb55-ca64-44ba-bce6-b731f7370c52.png)
+
